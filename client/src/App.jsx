@@ -9,9 +9,11 @@ import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
+  const basename = import.meta.env.BASE_URL || '/';
+  
   return (
     <ErrorBoundary>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="courses/:courseId/print" element={<PrintView />} />
           <Route path="/" element={<Layout />}>

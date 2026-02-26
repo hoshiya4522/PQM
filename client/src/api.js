@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // Use relative path so it works on localhost, LAN IP, or behind a proxy
-const API_URL = import.meta.env.VITE_API_URL || '/api';
+const BASE = import.meta.env.BASE_URL || '/';
+const API_URL = import.meta.env.VITE_API_URL || (BASE.endsWith('/') ? BASE + 'api' : BASE + '/api');
 const STATIC_MODE = import.meta.env.VITE_STATIC_MODE === 'true';
 
 export const api = axios.create({
