@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configuration
-REPO_NAME="past-question-manager" # Set this to your repository name on GitHub Pages
-STATIC_BASE="/past-question-manager/" # Use "/" for root domain, "/repo-name/" for GitHub Pages subfolder
+REPO_NAME="PQM" # Set this to your repository name on GitHub Pages
+STATIC_BASE="/PQM/" # Use "/" for root domain, "/repo-name/" for GitHub Pages subfolder
 
 # Parse arguments
 while [[ "$#" -gt 0 ]]; do
