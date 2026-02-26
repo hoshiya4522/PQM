@@ -1,0 +1,21 @@
+server/node_modules/
+client/node_modules/
+
+# Dependencies
+node_modules/
+/jspm_packages/
+/.npm/
+/bower_components/
+
+# Production
+/npm-debug.log
+/*.tgz
+/dist/
+/build/
+
+# Testing
+/coverage/
+
+# Environment
+.env
+.DS_Store # Mac specific

@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-bg-main: var(--bg-main);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-sidebar: var(--bg-sidebar);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-text-sidebar: var(--text-sidebar);
+  --color-border-main: var(--border-main);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-sidebar-accent: var(--sidebar-accent);
+}
+
+:root {
+  /* Default Theme */
+  --bg-main: #f9fafb;
+  --bg-surface: #ffffff;
+  --bg-sidebar: #111827;
+  --sidebar-accent: #1f2937;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --text-sidebar: #ffffff;
+  --border-main: #e5e7eb;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #eff6ff;
+}
+
+[data-theme='dark'] {
+  --bg-main: #111827;
+  --bg-surface: #1f2937;
+  --bg-sidebar: #030712;
+  --sidebar-accent: #111827;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --text-sidebar: #f9fafb;
+  --border-main: #374151;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --accent: #1e3a8a;
+}
+
+[data-theme='amoled'] {
+  --bg-main: #000000;
+  --bg-surface: #000000;
+  --bg-sidebar: #000000;
+  --sidebar-accent: #18181b;
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --text-sidebar: #ffffff;
+  --border-main: #27272a;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --accent: #18181b;
+}
+
+[data-theme='paper'] {
+  --bg-main: #f4f4f0;
+  --bg-surface: #ffffff;
+  --bg-sidebar: #e8e8e1;
+  --sidebar-accent: #d6d3d1;
+  --text-main: #1a1a1a;
+  --text-muted: #57534e;
+  --text-sidebar: #292524;
+  --border-main: #d6d3d1;
+  --primary: #44403c;
+  --primary-hover: #1c1917;
+  --accent: #d6d3d1;
+}
+
+[data-theme='light'] {
+  --bg-main: #ffffff;
+  --bg-surface: #fcfcfc;
+  --bg-sidebar: #ffffff;
+  --sidebar-accent: #f1f5f9;
+  --text-main: #000000;
+  --text-muted: #4b5563;
+  --text-sidebar: #111827;
+  --border-main: #e5e7eb;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #f1f5f9;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-main);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
